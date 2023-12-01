@@ -84,17 +84,134 @@ Sign in with username and domain name.
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="977" alt="Screenshot 2023-11-30 at 1 52 50 AM" src="https://github.com/reginacuenta/active-directory/assets/150301999/5e26ffa8-7d63-4102-aaaf-39571d9b054f">
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Create a employee organizational unit.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="909" alt="Screenshot 2023-11-30 at 1 53 55 AM" src="https://github.com/reginacuenta/active-directory/assets/150301999/aef6663d-9d6e-4990-8fd9-07b101bde8bf">
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Create an admin organizational unit.
 </p>
 <br />
+
+<p>
+<img width="999" alt="Screenshot 2023-11-30 at 6 19 16 PM" src="https://github.com/reginacuenta/active-directory/assets/150301999/78374ad6-d45c-4371-8078-f341580f9049">
+</p>
+<p>
+Create an admin account.
+</p>
+<br />
+
+<p>
+<img width="992" alt="Screenshot 2023-11-30 at 6 20 14 PM" src="https://github.com/reginacuenta/active-directory/assets/150301999/523e7a80-e561-451d-a7e1-e8fbab179ca5">
+</p>
+<p>
+Include jane in domain admins.
+</p>
+<br />
+
+<p>
+<img width="911" alt="Screenshot 2023-11-30 at 6 21 31 PM" src="https://github.com/reginacuenta/active-directory/assets/150301999/1987a4fe-e7d3-40f8-af58-e0d99d4d659c">
+</p>
+<p>
+Sign in as jane_admin within mydomain.com.
+<br />
+
+<p>
+<img width="1033" alt="Screenshot 2023-11-30 at 6 33 07 PM" src="https://github.com/reginacuenta/active-directory/assets/150301999/0ee26a44-5c2f-489c-a154-f26a04a237e7">
+
+</p>
+<p>
+From the Azure Portal, set Client-1’s DNS settings to the DC’s Private IP address.
+
+</p>
+<br />
+
+<p>
+<img width="1252" alt="Screenshot 2023-11-30 at 6 35 20 PM" src="https://github.com/reginacuenta/active-directory/assets/150301999/d48c811c-4470-47c4-b0c5-4264b81670e8">
+
+</p>
+<p>
+From the Azure Portal, restart Client-1.
+
+</p>
+<br />
+
+<p>
+<img width="1285" alt="Screenshot 2023-11-30 at 8 04 43 PM" src="https://github.com/reginacuenta/active-directory/assets/150301999/7b5d8a36-319f-41b5-a027-5da99aa8a9ba">
+
+</p>
+<p>
+Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart).
+</p>
+<br />
+
+<p>
+<img width="1237" alt="Screenshot 2023-11-30 at 8 40 17 PM" src="https://github.com/reginacuenta/active-directory/assets/150301999/9065b15c-ff5d-4d11-8db0-6e9132a9bc28">
+
+</p>
+<p>
+Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain.
+</p>
+<br />
+
+<p>
+<img width="1245" alt="Screenshot 2023-11-30 at 8 40 29 PM" src="https://github.com/reginacuenta/active-directory/assets/150301999/7793e495-4949-4b5a-a069-b1224da62592">
+</p>
+<p>
+Log into Client-1 as mydomain.com\jane_admin and open system properties.
+
+</p>
+<br />
+
+<p>
+<img width="1260" alt="Screenshot 2023-11-30 at 8 41 05 PM" src="https://github.com/reginacuenta/active-directory/assets/150301999/3dfbfb14-da30-442c-bca2-f2a67d1d2a35">
+</p>
+<p>
+Allow “domain users” access to remote desktop.
+
+</p>
+<br />
+
+<p>
+<img width="1270" alt="Screenshot 2023-11-30 at 9 06 45 PM" src="https://github.com/reginacuenta/active-directory/assets/150301999/eb6dbaf6-146d-4bdd-8846-5189961a17c8">
+
+</p>
+<p>
+Login to DC-1 as jane_admin.
+
+</p>
+<br />
+
+<p>
+<img width="1256" alt="Screenshot 2023-11-30 at 9 09 11 PM" src="https://github.com/reginacuenta/active-directory/assets/150301999/6b6610c5-2567-4023-9aee-5b5dc1627b8e">
+
+</p>
+<p>
+Open PowerShell_ise as an administrator. Create a new File and paste the contents of the script into it.
+</p>
+<br />
+
+<p>
+<img width="1097" alt="Screenshot 2023-11-30 at 8 43 20 PM" src="https://github.com/reginacuenta/active-directory/assets/150301999/d8ad67da-429f-4433-b846-e3a3a85c5e02">
+
+</p>
+<p>
+Login as one of the created users from the script.
+</p>
+<br />
+
+<p>
+<img width="1266" alt="Screenshot 2023-11-30 at 9 13 11 PM" src="https://github.com/reginacuenta/active-directory/assets/150301999/78d7f59c-8898-4412-a181-a318a45b8a41">
+
+</p>
+<p>
+In DC-1, you can reset the password, disable an account and enable an account.
+</p>
+<br />
+
